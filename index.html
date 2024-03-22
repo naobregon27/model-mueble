@@ -8,24 +8,24 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <style>
- .dot{
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    transform: translateX(-50%) translateY(-50%);
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7), 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+    .dot {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7), 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 </style>
 
-<body> 
+<body>
     <model-viewer src="./assests/SESSION_1710860318_2109702_mesh (1).glb" ar ar-modes="scene-viewer webxr quick-look"
-    ios-src="./assests/SESSION_1710860318_2109702_mesh (1).usdz"
-     camera-controls tone-mapping="commerce" poster="./assests/poster.webp" shadow-intensity="1">
-        <div class="progress-bar hide" slot="progress-bar">
+        ios-src="./assests/SESSION_1710860318_2109702_mesh (1).usdz" camera-controls tone-mapping="commerce"
+        poster="./assests/poster.webp" shadow-intensity="1">
+        <!-- <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
         </div>
         <button slot="ar-button" id="ar-button">
@@ -33,9 +33,19 @@
         </button>
         <div id="ar-prompt">
             <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div>
+        </div> -->
+       
     </model-viewer>
-    
+    <button onclick="startAR()">Ver en tu espacio</button>
+
+    <!-- Agrega aquí tus scripts JavaScript si es necesario -->
+    <script>
+        function startAR() {
+            // Lógica para activar la AR aquí
+            // Por ejemplo, podrías abrir la cámara del dispositivo o mostrar un mensaje
+            alert("¡AR activada! Escanea el entorno con tu cámara.");
+        }
+    </script>
 
 </body>
 

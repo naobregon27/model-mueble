@@ -13,30 +13,69 @@
         position: absolute;
         width: 20px;
         height: 20px;
+        top: 10%;
+        left: 10%;
         transform: translateX(-50%) translateY(-50%);
         border-radius: 50%;
         box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7), 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.9);
         background-color: rgba(0, 0, 0, 0.7);
     }
+
+    .popup {
+        position: fixed;
+        top: 10%;
+        left: 12%;
+        transform: translate(-50%, -50%);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .popup button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .up{
+        position: fixed;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        justify-content: center;
+        left: 6.5%;
+    }
 </style>
 
 <body>
-    <model-viewer src="./assests/SESSION_1710860318_2109702_mesh (1).glb" ar ar-modes="scene-viewer webxr quick-look"
-        ios-src="./assests/SESSION_1710860318_2109702_mesh (1).usdz" camera-controls tone-mapping="commerce"
-        poster="./assests/poster.webp" shadow-intensity="1">
-        <!-- <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-        <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div> -->
-       
-    </model-viewer>
-    <button onclick="startAR()">Ver en tu espacio</button>
+    <div class="popup">
+        <p>Las medidas son 1.5</p>
+        <button onclick="cerrarCartel()">Entendido</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <model-viewer src="./assests/SESSION_1710860318_2109702_mesh (1).glb" ar
+            ar-modes="scene-viewer webxr quick-look" ios-src="./assests/SESSION_1710860318_2109702_mesh (1).usdz"
+            camera-controls tone-mapping="commerce" poster="./assests/poster.webp" shadow-intensity="1">
+
+        </model-viewer>
+        <button class="up" onclick="startAR()">Ver en tu espacio</button>
+    </div>
 
     <script>
         function startAR() {
@@ -50,6 +89,11 @@
                     // Si hay un error al acceder a la cámara
                     console.error("Error al acceder a la cámara:", error);
                 });
+        }
+
+        function cerrarCartel() {
+            // Oculta el cartel
+            document.querySelector('.popup').style.display = 'none';
         }
     </script>
 

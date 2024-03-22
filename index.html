@@ -38,12 +38,18 @@
     </model-viewer>
     <button onclick="startAR()">Ver en tu espacio</button>
 
-    <!-- Agrega aquí tus scripts JavaScript si es necesario -->
     <script>
         function startAR() {
-            // Lógica para activar la AR aquí
-            // Por ejemplo, podrías abrir la cámara del dispositivo o mostrar un mensaje
-            alert("¡AR activada! Escanea el entorno con tu cámara.");
+            // Abre la cámara del dispositivo
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    // La cámara está activa, puedes hacer algo con el flujo de video si lo deseas
+                    console.log("Cámara activada");
+                })
+                .catch(function (error) {
+                    // Si hay un error al acceder a la cámara
+                    console.error("Error al acceder a la cámara:", error);
+                });
         }
     </script>
 

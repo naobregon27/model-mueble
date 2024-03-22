@@ -24,8 +24,12 @@
 
     .popup {
         position: fixed;
-        top: 10%;
-        left: 12%;
+        display: inline-block;
+        justify-content:  center;
+        align-items: center;
+        z-index: 10;
+        top: 15%;
+        left: 50%;
         transform: translate(-50%, -50%);
         background-color: #f9f9f9;
         padding: 20px;
@@ -34,6 +38,24 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
+    
+    .popup2 {
+        position: fixed;
+        display: inline-block;
+        justify-content:  center;
+        align-items: center;
+        z-index: 10;
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
 
     .popup button {
         background-color: #007bff;
@@ -45,22 +67,18 @@
     }
 
     .up{
-        position: fixed;
         background-color: #007bff;
         color: #fff;
         border: none;
         padding: 10px 20px;
         border-radius: 4px;
         cursor: pointer;
-        text-align: center;
-        justify-content: center;
-        left: 6.5%;
     }
 </style>
 
 <body>
     <div class="popup">
-        <p>Las medidas son 1.5</p>
+        <p>Debes estar entre 1.5 metro a 2 metros de distancia para visualizar en el tamaño aproximado </p>
         <button onclick="cerrarCartel()">Entendido</button>
     </div>
     <br>
@@ -68,7 +86,12 @@
     <br>
     <br>
     <br>
-    <div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="popup2">
         <model-viewer src="./assests/SESSION_1710860318_2109702_mesh (1).glb" ar
             ar-modes="scene-viewer webxr quick-look" ios-src="./assests/SESSION_1710860318_2109702_mesh (1).usdz"
             camera-controls tone-mapping="commerce" poster="./assests/poster.webp" shadow-intensity="1">

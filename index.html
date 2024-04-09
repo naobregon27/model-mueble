@@ -25,7 +25,7 @@
     .popup {
         position: fixed;
         display: inline-block;
-        justify-content:  center;
+        justify-content: center;
         align-items: center;
         z-index: 10;
         top: 15%;
@@ -38,11 +38,11 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
-    
+
     .popup2 {
         position: fixed;
         display: inline-block;
-        justify-content:  center;
+        justify-content: center;
         align-items: center;
         z-index: 10;
         top: 49%;
@@ -55,7 +55,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
-    
+
 
     .popup button {
         background-color: #007bff;
@@ -66,7 +66,7 @@
         cursor: pointer;
     }
 
-    .up{
+    .up {
         background-color: #007bff;
         color: #fff;
         border: none;
@@ -92,9 +92,9 @@
     <br>
     <br>
     <div class="popup2">
-        <model-viewer src="./assests/MuebleAR_final.glb" ar
-            ar-modes="scene-viewer webxr quick-look" ios-src="./assests/MuebleAR_final_usdz.usdz"
-            camera-controls tone-mapping="commerce" poster="./assests/poster.webp" shadow-intensity="1">
+        <model-viewer src="./assests/MuebleAR_final.glb" ar ar-modes="scene-viewer webxr quick-look"
+            ios-src="./assests/MuebleAR_final_usdz.usdz" camera-controls tone-mapping="commerce"
+            poster="./assests/poster.webp" shadow-intensity="1" camera-orbit="0deg 45deg 2m" disable-zoom>
 
         </model-viewer>
         <button class="up" onclick="startAR()">Ver en tu espacio</button>
